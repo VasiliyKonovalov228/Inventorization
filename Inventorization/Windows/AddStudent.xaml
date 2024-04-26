@@ -1,0 +1,118 @@
+﻿<Window x:Class="Inventorization.Windows.AddStudent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Inventorization.Windows"
+        mc:Ignorable="d"
+        Title="AddStudent" Height="600" Width="500">
+    <Grid>
+        <TextBlock 
+                    FontSize="25"
+                    Height="50"
+                    Width="100"
+                    Margin="0 0 0 50"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Text="Назад" MouseDown="TextBlock_MouseDown"
+                    >
+        </TextBlock>
+        <StackPanel  >
+            <TextBlock 
+            Height="30" 
+            Width="250" 
+            Text="Имя"
+            TextAlignment="Left" 
+            FontSize="25" 
+            
+            />
+            <TextBox 
+            x:Name="tbFirstName"
+            Height="40"
+            Width="250"
+            FontSize="25"
+            VerticalContentAlignment="Center"/>
+            <TextBlock 
+            Height="30" 
+            Width="250" 
+            Text="Фамилия"
+            TextAlignment="Left" 
+            FontSize="25" 
+            
+            />
+            <TextBox 
+            x:Name="tbLastName"
+            Height="40"
+            Width="250"
+            FontSize="25"
+            VerticalContentAlignment="Center"/>
+            <TextBlock 
+            Height="30" 
+            Width="250" 
+            Text="Отчество"
+            TextAlignment="Left" 
+            FontSize="25" 
+            
+            />
+            <TextBox 
+            x:Name="tbPatronymic"
+            Height="40"
+            Width="250"
+            FontSize="25"
+            VerticalContentAlignment="Center"/>
+            <TextBlock 
+            Height="30" 
+            Width="250" 
+            Text="Адрес"
+            TextAlignment="Left" 
+            FontSize="25" 
+            
+            />
+            <TextBox 
+            x:Name="tbAddress"
+            Height="40"
+            Width="250"
+            FontSize="25"
+            VerticalContentAlignment="Center"
+            />
+            <TextBlock 
+            Height="30" 
+            Width="250" 
+            Text="Дата рождения"
+            TextAlignment="Left" 
+            FontSize="25" 
+            
+            />
+            <DatePicker
+            x:Name="dpBirthDay"
+            Height="40"
+            Width="250"
+            FontSize="25"
+            VerticalContentAlignment="Center"
+            />
+            <TextBlock 
+                Height="39" 
+                Width="250" 
+                Text="Группа"
+                TextAlignment="Left" 
+                FontSize="25" 
+                />
+            <ComboBox 
+                x:Name="cbGroup"
+                Height="40"
+                Width="250"
+                FontSize="25"
+                VerticalContentAlignment="Center"/>
+           
+            <Button 
+            x:Name="btnAdd"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            Margin="0 20 0 0"
+            Content="Добавить"
+            FontSize="20"
+            Height="30" 
+            Width="100" Click="btnAdd_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

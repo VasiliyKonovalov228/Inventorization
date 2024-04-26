@@ -1,0 +1,61 @@
+﻿<Window x:Class="Inventorization.Windows.ChooseEmployee"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Inventorization.Windows"
+        mc:Ignorable="d"
+        Title="ChooseEmployee" Height="450" Width="800">
+    <Grid>
+        <TextBlock 
+                    FontSize="25"
+                    Height="50"
+                    Width="100"
+                    Margin="0 0 0 50"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Text="Назад" MouseDown="TextBlock_MouseDown"
+                    >
+        </TextBlock>
+        <DataGrid x:Name="dgChooseEmployee"
+                  Height="250"
+                  Width="700"
+                  AutoGenerateColumns="False" SelectedItem="{Binding SelectedAudience}"
+                  ItemsSource="{Binding View}" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding ID}" Header="Id" Width="30"/>
+                <DataGridTextColumn Binding="{Binding Number}" Header="Номер" Width="60"/>
+                <DataGridTextColumn Binding="{Binding Employee.LastName}" Header="Фамилия сотруднкиа" Width="140"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <WrapPanel HorizontalAlignment="Center" Margin="0 50 0 0" VerticalAlignment="Bottom">
+            <Button 
+                    x:Name="btnAdd"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Content="Дoбавить"
+                    FontSize="32"
+                    Height="50" 
+                    Width="215" Click="btnAdd_Click" />
+            <Button 
+                    x:Name="btnEdit"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Content="Изменить"
+                    FontSize="32"
+                    Margin="50 0"
+                   
+                    Height="50" 
+                    Width="215" Click="btnEdit_Click" />
+            <Button 
+                    x:Name="btnDelete"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Content="Удалить"
+                    FontSize="32"
+                    
+                    Height="50" 
+                    Width="215" Click="btnDelete_Click" />
+        </WrapPanel>
+    </Grid>
+</Window>

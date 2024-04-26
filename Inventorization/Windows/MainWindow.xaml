@@ -1,0 +1,49 @@
+﻿<Window x:Class="Inventorization.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Inventorization"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock
+                Height="30"
+                Width="200"
+                Text="Авторизация"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                FontSize="20"
+                TextAlignment="Center"
+                ></TextBlock>
+           
+            <TextBox
+                x:Name="tbLogin"
+                Height="40"
+                Width="200"
+                FontSize="10"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Margin="0 0 0 20" >
+            </TextBox>
+            
+            <PasswordBox
+                x:Name="pbPass"
+                Height="40"
+                Width="200"
+                FontSize="10"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center">
+            </PasswordBox>
+            <Button
+                x:Name="btnAuth"
+                Content="Войти"
+                Height="20"
+                Width="100"
+                Margin="20" Click="btnAuth_Click"
+                >
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>
